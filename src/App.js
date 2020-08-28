@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import {useDispatch} from "react-redux";
+import {fetchPageData} from "./actions/actionsPage";
+import {fetchSettingsData} from "./actions/actionsSettings";
 
-import './App.css';
-
-function App() {
+const App = (props) => {
+    const dispatch = useDispatch()
+  useEffect(() => {
+      dispatch(fetchPageData());
+      dispatch(fetchSettingsData())
+  }, [])
   return (
     <div className="App">
-      
+
     </div>
   );
 }
