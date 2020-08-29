@@ -2,8 +2,8 @@ import { SETTINGS_DATA_LOADED, SETTINGS_DATA_ERROR, START_FETCHING_SETTINGS_DATA
 const initialState = {
     loading: false,
     error: null,
-    headerNav: null,
-    footerNav: null
+    headerNav: [],
+    footerNav: []
 }
 
 const settings = (state= initialState, action) => {

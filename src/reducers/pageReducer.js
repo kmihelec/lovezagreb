@@ -2,12 +2,12 @@ import { START_FETCHING_PAGE_DATA, PAGE_DATA_ERROR, PAGE_DATA_LOADED } from '../
 const initialState = {
     loading: false,
     error: null,
-    mostRecent: null,
-    latest: null,
-    loops: null,
-    mostLiked: null,
-    latestImages: null,
-    topics: null
+    mostRecent: {},
+    latest: [],
+    loops: [],
+    mostLiked: [],
+    latestImages: [],
+    topics: []
 }
 
 const page = (state= initialState, action) => {
