@@ -1,0 +1,61 @@
+.mainStory {
+    grid-column: 1/ span 10;
+    grid-row: 1/span 4;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.story {
+    margin-left: 10px;
+    max-width: 80%;
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.title {
+    font-weight: normal;
+    padding: 20px;
+    background-color: black;
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-weight: normal;
+    padding: 20px;
+    background-color: black;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hashtag {
+    font-weight: normal;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: black;
+    color: #ffcd3f;
+    margin-bottom: 20px;
+}
+
+.mainStoryButton:hover {
+    cursor: pointer;
+    transform: scale(0.95, 0.95);
+    transition: 0.3s;
+}
+
+
+

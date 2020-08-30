@@ -1,0 +1,160 @@
+.header {
+    z-index: 2;
+    grid-column: 1/ span 10;
+    grid-row: 1/1;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+
+}
+
+.wrapper {
+    max-width: 1410px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navigation {
+   line-height: 2.5;
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownItem {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    z-index: 3;
+
+}
+
+.dropdown:hover .dropdownItem{
+    display: block;
+}
+
+.dropdownCtn {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.dropdownCtn:hover {
+    background-color:#ffcd3f;
+
+}
+
+.linkItem{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.linkItem:hover {
+    cursor: pointer
+;
+}
+
+.activeItem {
+    color:  #ffcd3f;
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile > div {
+    width: 2rem;
+    height: 3px;
+    background-color: white;
+    margin: 6px 20px;
+
+}
+
+.logo {
+    flex: 1;
+    font-size: 2.2rem;
+    padding: 10px;
+    font-family: "Roboto Slab", serif;
+}
+
+.search {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px
+}
+
+.search:focus {
+    outline: none;
+    border: 1px solid #ffcd3f;
+    box-shadow: 0 1px 3px   #ffcd3f, 0 -1px 3px #ffcd3f
+}
+
+.search::placeholder {
+    color: #ffcd3f;
+}
+
+.search:focus::placeholder {
+    color: transparent;
+}
+
+@media screen and (max-width: 980px) {
+    .navigation {
+        display: none;
+    }
+    .mobile {
+        display: block;
+
+    }
+
+    .linkItem {
+        display: block;
+    }
+
+    .expand {
+        padding: 20px;
+        width: 100%;
+        background-color: #171717;
+        position: absolute;
+        display: block;
+        top: 3rem
+    }
+
+    .dropdownItem {
+        position: relative;
+        background-color: #171717;
+        color: white;
+    }
+
+    .header {
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .search {
+        flex: 100%
+    }
+    .expand {
+        top: 4rem
+    }
+}
+
