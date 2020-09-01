@@ -59,14 +59,22 @@ const MainBody = () => {
 
                 <div className={style.section}>
                     <h2 className={style.sectionTitle}>ExploreTopics</h2>
-                    {topics.map(topic => <Topics key={topic.ID} items={topic} name={topic.name} article={topic.article} />)}
+                    <div className={style.slider}>
+                        <div className={style.hide}>
+                            {topics.map((topic, i) => <Topics key={topic.ID} items={topic} name={topic.name} article={topic.article} id={i} />)}
+                        </div>
+                    </div>
                 </div>
 
                 {/* -------------------------------- LATEST IMAGES -------------------------------- */}
 
                 <div className={style.section}>
                     <h2 className={style.sectionTitle}>Latest images</h2>
-                    <LatestImages items={latestImages} />
+                    <div className={style.slider}>
+                        <div className={style.hide}>
+                            {latestImages.map((image, i) => <LatestImages key={image.MediaID} item={image} id={i} />)}
+                        </div>
+                    </div>
                 </div>
 
                 {/* -------------------------------- SHARE PHOTO -------------------------------- */}

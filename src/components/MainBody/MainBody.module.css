@@ -251,14 +251,26 @@
 
 
 .slider {
+    position: relative;
     display: flex;
+
+}
+
+.hide {
+    display: flex;
+    overflow: hidden;
 }
 
 .topicContainer {
     min-height: 25rem;
-    flex: 1;
     display: flex;
+    flex:1 0 33%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
+
 
 .topic {
     display: flex;
@@ -267,8 +279,6 @@
     font-family: "Roboto Slab", serif;
     color: white;
     background-color: rgba(0,0,0, 0.4);
-
-
 }
 
 .topic:hover {
@@ -299,11 +309,11 @@
 }
 
 .pictureContainer {
-    flex: 23%;
+    flex: 1 0 23%;
     min-height: 20rem;
     background-color: white;
     padding: 10px;
-    margin: 20px;
+    margin: 10px 15px;
 
 }
 
@@ -328,6 +338,7 @@
     margin: 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -347,10 +358,6 @@
     }
 
 
-    .hide {
-        display: none;
-        background-repeat: no-repeat;
-    }
 
     .topicContainer {
         background-repeat: no-repeat;
