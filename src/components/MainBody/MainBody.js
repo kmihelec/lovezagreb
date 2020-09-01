@@ -14,6 +14,12 @@ const MainBody = () => {
     const mostLiked = useSelector(state=> state.page.mostLiked);
     const latestImages = useSelector(state=> state.page.latestImages);
     const topics = useSelector(state=> state.page.topics);
+    const ranm = []
+    for(let i = 0; i<mostLiked.length; i++) {
+        ranm[i] = Math.floor(Math.random()* Math.floor(500))
+    }
+
+
     return (
         <div className={style.main}>
             <div className={style.mainBody}>
@@ -21,10 +27,10 @@ const MainBody = () => {
                 <div className={style.latest}>
                 {latest.map((latestStory, i) => {
                     if (i < 2) return <MedStory  key={latestStory.ID} item={latestStory} index={i}/>
-                    else if (i === 3) return (<>
+                    else if (i === 3) return (<React.Fragment key={'000000'}>
                         <SmallStory key={latestStory.ID} item={latestStory} />
-                        <ShareYourPhoto/>
-                        </>)
+                        <ShareYourPhoto />
+                        </React.Fragment>)
                     else return <SmallStory key={latestStory.ID} item={latestStory} />
                 })}
                 </div>
@@ -43,7 +49,8 @@ const MainBody = () => {
                 <div className={style.section}>
                     <h2 className={style.sectionTitle}>Most popular stories</h2>
                     <div className={style.latest}>
-                        {mostLiked.map(story => <SmallStory key={story.ID} item={story} />)}
+                        {mostLiked.map((story, i )=><SmallStory key={`${story.ID}${ranm[i]}`} item={story}/>
+                        )}
                     </div>
                     <Button classname={style.moreStoriesButton} bgClr={'#ea1d5d'} name={'More stories'} fontsize={'1rem'} border={'none'} color={"white"}/>
                 </div>
@@ -52,7 +59,7 @@ const MainBody = () => {
 
                 <div className={style.section}>
                     <h2 className={style.sectionTitle}>ExploreTopics</h2>
-                        <Topics items={topics} />
+                    {topics.map(topic => <Topics key={topic.ID} items={topic} name={topic.name} article={topic.article} />)}
                 </div>
 
                 {/* -------------------------------- LATEST IMAGES -------------------------------- */}
