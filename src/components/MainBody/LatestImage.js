@@ -10,10 +10,12 @@ const LatestImages = (props) => {
     }
 
     return (
-            <div className={style.pictureContainer} id={id}>
+        <div className={style.hover} id={id}>
+            <div className={style.pictureContainer} >
                 <div className={style.bgImg} style={bgUrl}></div>
                 <div className={style.author}>{props.item.Description}</div>
             </div>
+        </div>
     );
 }
 

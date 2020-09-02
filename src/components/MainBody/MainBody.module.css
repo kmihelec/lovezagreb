@@ -219,6 +219,8 @@
 
 }
 
+
+
 .shareYourPhoto {
     border-radius: 3px;
     background-color: #ea1d5d;
@@ -251,8 +253,8 @@
 
 
 .slider {
-    position: relative;
-    display: flex;
+display: flex;
+
 
 }
 
@@ -268,10 +270,6 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
-
-
 .topic {
     display: flex;
     flex-direction: column;
@@ -309,19 +307,28 @@
 }
 
 .pictureContainer {
-    flex: 1 0 23%;
+    flex: 100%;
     min-height: 20rem;
     background-color: white;
     padding: 10px;
+
+
+}
+
+.hover {
+    display: flex;
+    flex: 1 0 23%;
     margin: 10px 15px;
-
 }
 
-.pictureContainer:hover{
-    transform: rotate(-5deg);
-    transition: 0.3s;
+
+
+.pictureContainer:hover {
+    transform: rotateZ(-5deg);
     cursor: pointer;
+    transition: 0.5s;
 }
+
 
 .author {
     font-family: "Indie Flower", serif;
@@ -356,6 +363,7 @@
     .loop {
         margin: 10px;
     }
+
 
 
 
